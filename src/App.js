@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import FormIpt from "./components/FormIpt";
+import DataDis from "./components/DataDis";
+import { useState } from "react";
 
 function App() {
+  const [dataArr, setDataArr] = useState([]);
+  const dataUpdateHandeler = (dataObj) => {
+    setDataArr((prev) => [...prev, dataObj]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ backgroundColor: "lightGrey", height: "100Vh" }}>
+      <FormIpt dataCollector={dataUpdateHandeler} />
+
+      {dataArr.map((data) => (
+        <DataDis name={data.name} age={data.age} key={Math.random()} />
+      ))}
     </div>
   );
 }

@@ -1,0 +1,24 @@
+.frm {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  gap: 1rem;
+}
+
+.frm input {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 0.6rem;
+}
+
+.btn {
+  display: block;
+  padding: 0.2rem 1rem;
+  max-width: 5rem;
+  /* margin: 1rem; */
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 0.6rem;
+  align-self: center;
+}

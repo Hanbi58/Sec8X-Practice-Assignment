@@ -1,0 +1,10 @@
+.dis {
+  text-align: center;
+  width: 20rem;
+  background-color: #fff;
+  margin: 0.5rem 0.1rem;
+  border: 2px solid black;
+  border-radius: 0.6rem;
+  display: inline-block;
+  padding: 0.2rem 0;
+}
